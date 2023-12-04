@@ -1,0 +1,22 @@
+name: gh-pages push action
+  
+on:
+  push:
+    branches:
+      - gh-pages
+  workflow_dispatch:
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Copy Branch to Destination Repository
+      run: |
+        git config --global user.email 'kuht07@mail.ru'
+        git config --global user.name 'VitalKz'
+        git remote add destination git@github.com:VitalKz/SatelShop.github.io.git
+        git push --force destination main
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
