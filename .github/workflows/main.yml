@@ -16,7 +16,6 @@ jobs:
       run: |
         git config --global user.email 'kuht07@mail.ru'
         git config --global user.name 'VitalKz'
-        git remote add destination git@github.com:VitalKz/SatelShop.github.io.git
-        git push --force destination main
+        git push git@github.com:VitalKz/SatelShop.github.io.git main
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
