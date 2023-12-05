@@ -17,5 +17,3 @@ jobs:
         git config --global user.email 'kuht07@mail.ru'
         git config --global user.name 'VitalKz'
         git push git@github.com:VitalKz/SatelShop.github.io.git gh-pages:main
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
