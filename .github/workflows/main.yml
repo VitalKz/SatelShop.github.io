@@ -16,6 +16,6 @@ jobs:
       run: |
         git config --global user.email 'kuht07@mail.ru'
         git config --global user.name 'VitalKz'
-        git push https://VitalKz:${{ secrets.PAT_TOKEN }}@github.com/VitalKz/SatelShop.github.io.git gh-pages:main
+        git push https://VitalKz:${{ secrets.ACTIONS_KEY }}@github.com/VitalKz/SatelShop.github.io.git gh-pages:main
       env:
         PAT_TOKEN: ${{ secrets.ACTIONS_KEY }}
