@@ -18,4 +18,4 @@ jobs:
         git config --global user.name 'VitalKz'
         git push https://github.com/VitalKz/SatelShop.github.io.git gh-pages:main
       env:
-        GITHUB_TOKEN: ${{ secrets.ACTIONS_KEY }}
+        PAT_TOKEN: ${{ secrets.ACTIONS_KEY }}
