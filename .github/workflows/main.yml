@@ -20,6 +20,9 @@ jobs:
       run: |
         git config --global user.email 'kuht07@mail.ru'
         git config --global user.name 'VitalKz'
+        git config --global pack.windowMemory "100m"
+        git config --global pack.packSizeLimit "100m"
+        git config --global pack.threads "1"
         git push --force https://VitalKz:${{ secrets.PAT }}@github.com/VitalKz/SatelShop.github.io.git gh-pages:main
       env:
         PAT_TOKEN: ${{ secrets.PAT }}
