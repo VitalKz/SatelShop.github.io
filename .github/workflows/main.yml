@@ -27,6 +27,9 @@ jobs:
         
         # Delete the main branch in the destination repository
         git push --delete https://VitalKz:${{ secrets.PAT }}@github.com/VitalKz/SatelShop.github.io.git main
+
+        # Create a new main branch pointing to the latest commit of gh-pages
+        git branch -f main gh-pages
     
         # Add, commit, and push the changes
         git add .
