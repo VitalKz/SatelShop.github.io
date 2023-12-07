@@ -17,16 +17,15 @@ jobs:
         token: ${{ secrets.PAT }}
         fetch-depth: 0
     
-    - name: Debug Token
-      run: echo ${{ secrets.PAT }}    
-      
     - name: Copy Branch to Destination Repository
       run: |
         git config --global user.email 'kuht07@mail.ru'
         git config --global user.name 'VitalKz'
-        git config --global pack.windowMemory "100m"
-        git config --global pack.packSizeLimit "100m"
-        git config --global pack.threads "1"
-        git push --force https://VitalKz:${{ secrets.PAT }}@github.com/VitalKz/SatelShop.github.io.git gh-pages:main
+
+        # Fetch the latest changes from the gh-pages branch
+        git fetch origin gh-pages
+
+        # Force push the gh-pages branch to the main branch in the destination repository
+        git push --force https://VitalKz:${{ secrets.PAT }}@github.com/VitalKz/SatelShop.github.io.git gh-pages:main    
       env:
         PAT_TOKEN: ${{ secrets.PAT }}

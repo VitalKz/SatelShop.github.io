@@ -403,3 +403,5 @@ ASALocalRun/
 
 # Local History for Visual Studio
 .localhistory/
+SatelShop.API/Properties/launchSettings.json
+SatelShop/Properties/launchSettings.json
