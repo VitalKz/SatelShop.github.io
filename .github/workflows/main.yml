@@ -24,16 +24,22 @@ jobs:
       run: |
         git config --global user.email 'kuht07@mail.ru'
         git config --global user.name 'VitalKz'
-        
-        # Delete the main branch in the destination repository
-        git push --delete https://VitalKz:${{ secrets.PAT }}@github.com/VitalKz/SatelShop.github.io.git main
 
-        # Create a new main branch pointing to the latest commit of gh-pages
-        git branch -f main gh-pages
-    
-        # Add, commit, and push the changes
+        # Create an orphan branch (main-temp) pointing to the latest commit of gh-pages
+        git checkout --orphan main-temp gh-pages
+        
+        # Add, commit, and push the changes to the new orphan branch
         git add .
         git commit -m "New build from gh-pages"
-        git push https://VitalKz:${{ secrets.PAT }}@github.com/VitalKz/SatelShop.github.io.git gh-pages:main    
+        git push https://VitalKz:${{ secrets.PAT }}@github.com/VitalKz/SatelShop.github.io.git main-temp
+    
+        # Delete the old main branch
+        git push --delete https://VitalKz:${{ secrets.PAT }}@github.com/VitalKz/SatelShop.github.io.git main
+    
+        # Rename the new orphan branch to main
+        git branch -m main-temp main
+    
+        # Push the changes to the main branch
+        git push https://VitalKz:${{ secrets.PAT }}@github.com/VitalKz/SatelShop.github.io.git main    
       env:
         PAT_TOKEN: ${{ secrets.PAT }}
