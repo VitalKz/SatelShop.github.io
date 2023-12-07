@@ -25,13 +25,7 @@ jobs:
         # Fetch the latest changes from the gh-pages branch
         git fetch origin gh-pages
 
-        # Reset the main branch to match the latest commit of gh-pages
-        git checkout main
-        git reset --hard origin/gh-pages
-
-        # Add, commit, and push the changes to the main branch
-        git add .
-        git commit -m "New build from gh-pages"
-        git push https://VitalKz:${{ secrets.PAT }}@github.com/VitalKz/SatelShop.github.io.git main    
+        # Force push the gh-pages branch to the main branch in the destination repository
+        git push --force https://VitalKz:${{ secrets.PAT }}@github.com/VitalKz/SatelShop.github.io.git gh-pages:main    
       env:
         PAT_TOKEN: ${{ secrets.PAT }}
