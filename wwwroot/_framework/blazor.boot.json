@@ -1,7 +1,7 @@
 {
   "entryAssembly": "SatelShop",
   "resources": {
-    "hash": "sha256-gKhoz1+kwn4ZoMT7WIRVY7OEilztCwWcgxxUQWYV530=",
+    "hash": "sha256-2bIFS9wezH4mPwEf3QaRmt3jU7NUe7PTqkg5Rh6/wjk=",
     "runtime": {
       "dotnet.7.0.14.mikshhdjmu.js": "sha256-YWGUknGRzP/fgO6YjvCJKPVQNZAPEd6ll+rHfQEIW+I=",
       "dotnet.timezones.blat": "sha256-t5xviiOQTfAsF0UDhmcyalKiaehUmf/sqJl97tmPM0M=",
@@ -25,7 +25,7 @@
       "Microsoft.Extensions.Primitives.dll": "sha256-eXvGx2jcjpTPEJoAHBsW/VuMPbNyyU+AsuhPmkzSSRY=",
       "Microsoft.JSInterop.dll": "sha256-mN9NRjCix+WoB4T5gP2gNXLioxZJp+0st1wi6zcIABc=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-LIeei4/JFd3TBbtpEc1rneu+zOw4UNmSksghADw1m1I=",
-      "SatelShop.dll": "sha256-OoYpNfnsQnKI2zNuMNf6YpeO37U/Ys/yIW7w6m8aHA8=",
+      "SatelShop.dll": "sha256-Ps/ImzvDDj7bt0LdEOrLBPGYxLZYb1NJOnXmXpgK4qg=",
       "System.Collections.Concurrent.dll": "sha256-iVVE9O+NcP6iYl4sd/ZeC3urQoyLH9oTiV2umPpI0Ec=",
       "System.Collections.dll": "sha256-fIgnVkPAGfJKc4DkDNq4kXBb+vgd9CLX9C82nFYo0QQ=",
       "System.ComponentModel.dll": "sha256-pGP1Cnq1M/2Hkyb2tJWqyVXzPDBaqoWBi3pBs4L1Cbg=",
