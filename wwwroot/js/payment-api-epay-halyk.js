@@ -147,19 +147,19 @@ window.showHalykPaymentWidget = function (params, callback) {
     halyk.showPaymentWidget(params, callback);
 };
 
-var createPaymentObject = function (auth, invoiceId, amount, accountId) {
+var createPaymentObject = function (auth, invoiceId, amount, clientId, terminalId, curency, language) {
     var paymentObject = {
         invoiceId: invoiceId,
         backLink: "https://example.kz/success.html",
         failureBackLink: "https://example.kz/failure.html",
         postLink: "https://example.kz/",
         failurePostLink: "https://example.kz/order/1123/fail",
-        language: "RU",
+        language: language,
         description: "Оплата в интернет магазине SatelShop",
-        accountId: accountId, //"test",
-        terminal: "67e34d63-102f-4bd1-898e-370781d0074d",
+        accountId: clientId, //"test",
+        terminal: terminalId,
         amount: amount,
-        currency: "KZT"
+        currency: curency
     };
     paymentObject.auth = auth;
     return paymentObject;
