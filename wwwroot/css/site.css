@@ -1,0 +1,62 @@
+﻿.qty-control {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+}
+
+.qty-control-header h3 {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.qty-control-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.qty-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.qty-number {
+    font-size: 1.5em;
+    margin: 0 10px;
+}
+
+.btn-add-to-cart, .btn-close-cart {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn-close-cart {
+    background-color: #dc3545;
+    margin-left: 10px;
+    width: 76.6px;
+    height: 24px;
+    opacity: .9;
+    box-sizing: content-box;
+}

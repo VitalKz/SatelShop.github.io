@@ -4,6 +4,14 @@
             dotnetHelper.invokeMethodAsync('ReceiveLocation', position.coords.latitude, position.coords.longitude);
         });
     } else {
-        console.log("Geolocation is not supported by this browser.");
+        console.log("Геопозиция не поддерживается в текущем браузере.");
     }
 }
+
+window.askForGeolocation = function (dotnetHelper) {
+    if (confirm("Желаете определить вашу текущую геопозицю?")) {
+        window.getGeolocation(dotnetHelper);
+    } else {
+        console.log("Пользователь отклонил доступ к геопозиции.");
+    }
+};

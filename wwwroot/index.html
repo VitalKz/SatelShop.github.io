@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>SatelShop</title>
     <base href="/SatelShop.github.io" />
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/app.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/app.css" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <link href="SatelShop.styles.css" rel="stylesheet" />
     <!--04.04.24 Syncfusion implementation added-->
@@ -39,10 +39,27 @@
     <!--07.04.24 js session storage metods-->
     <script src="js/sessionStorageHelper.js"></script>
     <!--13.04.24 js ePay libraty added-->
-    <script src="js/payment-api-epay-halyk.js"></script>
+    <!--<script src="js/payment-api-epay-halyk.js"></script>-->
     <!--20.04.24 js geoLocation added-->
     <script src="js/geoLocation.js"></script>
+    <!--04.05.24 js jivosite added-->
+    <!--<script src="js/jivosite.js"></script>-->
+    <!--04.05.24 js jivosite added-->
+    <!--<script src="js/sendapi.js"></script>-->
+    <!--03.06.24 js freedom pay library-->
+    <script src="js/payment_freedom.js"></script>
+    <!--07.06.24 aded script for sync maps-->
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+    <!--27.06.24 new functionallity for separate window for adding products to shop cart-->
+    <script src="js/shopping_cart_window.js" type="text/javascript"></script>
+    <link href="css/site.css" rel="stylesheet" />
 </body>
 
 </html>
+
+<script>
+    function navigateToUrl(url) {
+        window.location.href = url;
+    }
+</script>
 
